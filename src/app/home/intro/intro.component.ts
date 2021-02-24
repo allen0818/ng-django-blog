@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements OnInit {
-  title = 'web';
-
+  title = 'angular-blog'
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  goBack(): void {
+
+  }
 }

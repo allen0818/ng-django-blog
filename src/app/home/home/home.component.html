@@ -1,0 +1,29 @@
+<mat-toolbar class="home-header" color="primary">
+  <button mat-icon-button (click)="sideNav.toggle()">
+    <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <span>Angular Blog</span>
+  <span class="toolbar-seperator"></span>
+  <button mat-icon-button>
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container autosize="true">
+  <mat-sidenav opened="true" mode="side" #sideNav>
+    <mat-nav-list>
+      <a [routerLink]="['/', 'home', 'survey']" mat-list-item>問卷調查</a>
+      <a [routerLink]="['/', 'home', 'blog']" mat-list-item>部落格</a>
+      <a [routerLink]="['/', 'home', 'inbox']" mat-list-item>收件夾</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button (click)="toggleSideNav(sideNav)">切換側邊選單</button>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

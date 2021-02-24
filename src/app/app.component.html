@@ -1,12 +1,3 @@
-<mat-sidenav-container>
-  <mat-sidenav opened="true" mode="side" #sideNav>
-    側邊選單
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <h1>HomeComponent Works !!</h1>
-    <button mat-button (click)="sideNav.toggle()">切換側邊選單</button>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-<router-outlet></router-outlet>
+<div style="height: 80vh;">
+  <router-outlet></router-outlet>
+</div>
