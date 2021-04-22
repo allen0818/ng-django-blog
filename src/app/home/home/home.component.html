@@ -7,6 +7,9 @@
   <button mat-icon-button>
     <mat-icon>notifications</mat-icon>
   </button>
+  <button mat-icon-button [matMenuTriggerFor]="messageMenu">
+    <mat-icon>message</mat-icon>
+  </button>
   <button mat-icon-button>
     <mat-icon>exit_to_app</mat-icon>
   </button>
@@ -16,8 +19,10 @@
   <mat-sidenav opened="true" mode="side" #sideNav>
     <mat-nav-list>
       <a [routerLink]="['/', 'home', 'survey']" mat-list-item>問卷調查</a>
-      <a [routerLink]="['/', 'home', 'blog']" mat-list-item>部落格</a>
+      <a [routerLink]="['/', 'posts']" mat-list-item>部落格</a>
       <a [routerLink]="['/', 'home', 'inbox']" mat-list-item>收件夾</a>
+      <mat-divider></mat-divider>
+      <a [routerLink]="['/', 'home', 'demo']" mat-list-item>示範</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,3 +32,10 @@
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<mat-menu #messageMenu="matMenu">
+  <ng-template matMenuContent>
+    <button mat-menu-item>最新訊息</button>
+    <button mat-menu-item>推播設定</button>
+  </ng-template>
+</mat-menu>
