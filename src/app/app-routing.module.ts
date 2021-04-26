@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'articles', pathMatch: 'full' },
+      { path: 'posts', loadChildren: () => import('./post/post.module').then(m => m.PostModule) },
+    ]
+  },
+  { path: '**', redirectTo: 'home'}
 ];
 
 @NgModule({

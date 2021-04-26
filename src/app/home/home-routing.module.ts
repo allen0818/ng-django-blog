@@ -8,12 +8,9 @@ const routes: Routes = [
   {
     path: 'home', component: HomeComponent,
     children: [
-      { path: 'intro', component: IntroComponent },
-      { path: 'demo', component: DemoComponent }
-      // { path: 'devices', loadChildren: () => import('../device/device.module').then(mod => mod.DeviceModule) }
+      { path: 'intro', component: IntroComponent }
     ]
-  },
-  { path: 'posts', loadChildren: () => import('../post/post.module').then(m => m.PostModule)}
+  }
 ];
 
 @NgModule({

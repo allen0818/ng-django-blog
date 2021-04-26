@@ -13,7 +13,7 @@ export class PostListComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.getPost();
+    // this.getPost();
   }
 
   getPost() {
