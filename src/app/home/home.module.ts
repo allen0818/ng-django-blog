@@ -6,10 +6,9 @@ import { SharedMaterialModule } from '../shared/shared-material.module';
 
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
-import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
-  declarations: [HomeComponent, IntroComponent, DemoComponent],
+  declarations: [HomeComponent, IntroComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
