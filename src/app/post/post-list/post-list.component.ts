@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { PostDialogComponent } from '../post-dialog/post-dialog.component';
 
 @Component({
   selector: 'app-post-list',
@@ -16,7 +18,10 @@ export class PostListComponent implements OnInit {
   displayColumns: string[] = ['id', 'title', 'user'];
   postDataSource = new MatTableDataSource<any>();
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private httpClient: HttpClient,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.getPost();
@@ -31,5 +36,10 @@ export class PostListComponent implements OnInit {
         this.postDataSource.paginator = this.paginator;
         this.postDataSource.sort = this.sort;
       });
+  }
+
+  openDialog() {
+    console.log('open dialog.');
+    this.dialog.open(PostDialogComponent);
   }
 }

@@ -1,4 +1,12 @@
 <mat-card style="width: 80%; margin-left: 2vw;">
+  <!-- Action Bar -->
+  <div class="operate">
+    <button mat-mini-fab color="primary" (click)="openDialog()" aria-label="Button to add new post.">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <!-- DataTable -->
   <table mat-table [dataSource]="postDataSource" matSort>
     <!-- Id Column-->
     <ng-container matColumnDef="id">
@@ -22,6 +30,7 @@
     <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
   </table>
 
+  <!-- Paginator -->
   <mat-paginator #paginator
                  [pageSizeOptions]="[10, 20]"
                  showFirstLastButtons>

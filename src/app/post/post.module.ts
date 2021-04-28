@@ -4,10 +4,11 @@ import { SharedMaterialModule } from '@app/shared/shared-material.module';
 
 import { PostRoutingModule } from './post-routing.module';
 import { PostListComponent } from './post-list/post-list.component';
+import { PostDialogComponent } from './post-dialog/post-dialog.component';
 
 
 @NgModule({
-  declarations: [PostListComponent],
+  declarations: [PostListComponent, PostDialogComponent],
   imports: [
     CommonModule,
     PostRoutingModule,

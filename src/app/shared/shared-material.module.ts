@@ -9,6 +9,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   exports: [
@@ -21,7 +24,10 @@ import { MatCardModule } from '@angular/material/card';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule
   ]
 })
 export class SharedMaterialModule { }
