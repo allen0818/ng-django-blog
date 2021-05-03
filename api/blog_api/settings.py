@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # 3rd apps
     'rest_framework',
+    'drf_yasg',
 
     # feature apps
     'posts.apps.PostsConfig',

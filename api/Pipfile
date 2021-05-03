@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 djangorestframework = "*"
 python-dotenv = "*"
+drf-yasg = "*"
 
 [requires]
 python_version = "3.7"
