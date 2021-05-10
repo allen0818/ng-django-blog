@@ -27,6 +27,15 @@ services:
     networks:
       - proxy
 
+  web:
+    image: 'blog-web'
+    build: './web'
+    container_name: 'blog-web'
+    ports:
+      - 3000:80
+    networks:
+      - proxy
+
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
